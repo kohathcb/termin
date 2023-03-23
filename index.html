@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        #terminal {
+            height: 100vh;
+            color: blue;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            background-color: black;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.75), black 120%);
+            background-size: cover;
+            overflow: auto;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal"></div>
+    <script>
+        $(function() {
+            const terminal = $('#terminal').terminal(function(command, term) {
+                switch (command) {
+                    case 'PBA':
+                        term.echo('Welcome to the terminal Agent!');
+                        term.echo('Type "help" for a list of commands');
+                        term.set_prompt('PBA/MetaDimesionalTerminal> ');
+                        break;
+                    case 'help':
+                        term.echo('Commands:');
+                        term.echo('agts - Grab a Agent');
+                        term.echo('agf - Agency files');
+                        term.echo('abt - About us');
+                        term.echo('scl - Socials');
+                        break;
+                    case 'agts':
+                        window.open('https://magiceden.io/marketplace/pba', '_blank');
+                        break;
+                    case 'agf':
+                        term.echo('Agency files coming soon...');
+                        term.echo('Type "agf/help" for list of commands')
+                        break;
+                    case 'agf/help':
+                        term.echo('agf/lore - To display a list of chapters of The Agencies Lore.');
+                        term.echo('agf/agents - Pulls up declassified agent files');
+                        term.echo('agf/Games - Pull up information on PBA games and tournaments');
+                        break;
+                    case 'agf/lore':
+                        term.set_prompt('PBA/MetaDimesionalTerminal/agf/lore> ');
+                        term.echo('Opening the lore section...');
+                        term.echo('agf/lore/Genesis - the origin of our creation');
+                        break;
+                    case 'agf/Games':
+                        term.echo('Game announcements coming soon!!');
+                        break;
+                    case 'agf/lore/Genesis':
+                        
+                        term.echo('Livewyez, an avid gamer and tech enthusiast, ventured into a local pawn shop in search of a new headset.');
+term.echo('As he browsed through the store\'s collection, a peculiar salesman caught his attention.');
+term.echo('The salesman had an air of mystery around him and approached Livewyez with an enticing offer.');
+term.echo('"I have something special for you," the salesman whispered, "A headset like no other. But beware, its appearance can be deceiving.');
+term.echo('It is the most powerful device in existence." He continued, "I\'ll let you have it for just $10.');
+term.echo('But you must not try it on here. Trust me, you wouldn\'t want this place to be your last memory." Confused yet intrigued, Livewyez decided to purchase the peculiar device.');
+term.echo('Upon returning home, Livewyez eagerly unboxed the headset, only to find a brown paper bag inside, accompanied by a note instructing him to put it on.');
+term.echo('As he examined the bag, he noticed that its interior seemed to contain an endless galaxy, stirring a sense of wonder and anticipation.');
+term.echo('Unable to resist the temptation, Livewyez carefully placed the paper bag over his head.');
+term.echo('In an instant, he was transported into the metaverse – a realm where all games and digital content coexisted.');
+term.echo('As Livewyez journeyed through the endless expanse of games, he encountered NPCs and players alike, forming friendships and alliances.');
+term.echo('During his travels, he stumbled upon a peculiar creature with no identifying tags or affiliations to any game.');
+term.echo('It only spoke two words: "splee" and "bee." The enigmatic creature, which came to be known as the spleebee, appeared drawn to the mysterious paper bag headset.');
+term.echo('As Livewyez and the spleebee spent more time together, they developed a strong bond.');
+term.echo('They discovered that the spleebee possessed the unique ability to manipulate the metaverse, allowing them to jump between games and even bend the digital reality to their will.');
+term.echo('This incredible power proved useful as they ventured further into uncharted territories and encountered various challenges.');
+term.echo('One fateful day, as Livewyez and the spleebee explored a previously unknown corner of the metaverse, they were suddenly ambushed by a group of Admins.');
+term.echo('These Admins, determined to maintain control and order in the digital realm, perceived the paper bag headset and the spleebee as threats to their authority.');
+term.echo('Caught off guard, Livewyez fought back against the Admins, utilizing the skills he had acquired during his adventures.');
+term.echo('Just as he was about to be struck by a powerful attack, the spleebee intervened, calling out to Livewyez amidst the chaos.');
+term.echo('In response, the two were transported to an entirely new game – or perhaps, not an entirely new game, but rather a place that seemed familiar yet different.');
+term.echo('In this new realm, Livewyez and the spleebee found themselves surrounded by landscapes and characters reminiscent of the games Livewyez had played during his youth.');
+term.echo('However, the colors were more vivid, the music more enchanting, and an aura of enigma permeated the atmosphere.');
+term.echo('As they delved deeper into this world, they came to realize that it was a sanctuary for forgotten game characters and discarded digital content.');
+term.echo('In this haven, they had established a harmonious community, coexisting despite their diverse origins.');
+term.echo('Aware of the looming threat posed by the Admins, Livewyez and the spleebee resolved to protect their newfound friends and the realm they had come to cherish.');
+term.echo('They decided to establish a secret agency called the Paper Bag Agency, led by directors Mola and Alom, to monitor the metaverse, safeguard its inhabitants, and combat threats like the Admins.');
+
+                        break;
+                    case 'abt':
+                        term.echo('The Paper Bag Agents are 500 1 of 1 collectible game characters developed by Underground Labs Studios. Agents are the secret dimension traveling protectors of the metaverse they come in various species, bags, outfits, backgrounds, and statuses some more rare than others. Each agent will be your access pass to games and projects developed by The Agency. Our Job is simple: protect the metaverse from the scum of earth.');
+                        term.echo('We sold out on May 5, 2022');
+                        term.echo('Each agent gives you access to games made for the Agency by UGL Studios');
+                        term.echo('To learn more about the lore and upcoming announcements in the Agency Files. Command : agf');
+                        break;
+                    case 'scl':
+                        window.open('https://twitter.com/PaperBagAgency_', '_blank');
+                        break;
+                    default:
+                        term.error('Invalid command. Type "help" for a list of commands.');
+                        break;
+                }
+            }, {
+                greetings: 'Welcome to Paper Bag Agency MetaDimesional Terminal\nType "PBA" to enter:',
+                prompt: '> ',
+                theme: 'blue',
+                onBlur: function() {
+                    return false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
